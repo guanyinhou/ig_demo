@@ -28,50 +28,29 @@ window.onload = function() {
     
     // 搜尋
     // searchBtn.addEventListener("touchstart", function(e) {
-    //     // alert("touch 1");
-    //     // e.preventDefault()
-    //     // alert("click event!");
-    //     // console.log(e);
-    //     // console.log(e.path[0].previousElementSibling.value);
-    //     // let inputVal = e.path[0].previousElementSibling.value;
-    //     // alert(e.target.parentElement.children[0].value + " touch 1-1");
-    //     // alert(e.path[0].previousElementSibling.value + " touch 1-2");
-    //     let inputVal = e.target.parentElement.children[0].value;
-    //     if(inputVal === "") {return}
-    //     // alert("touch 2");
-    //     if(inputVal){
-    //         resetData();
-    //     }
-    //     // alert("touch 3");
-    //     keyword = inputVal;
-    //     // alert("touch 4");
-    //     searchHashTag(inputVal);
-    //     // alert("touch 5");
-    //     e.path[0].previousElementSibling.value = "";
-    //     // alert("touchstart event!");
     // })
     searchBtn.addEventListener("click", function(e){
-        alert("click 1");
+        // alert("click 1");
         // e.preventDefault()
         // alert("click event!");
-        console.log(e);
+        // console.log(e);
         // console.log(e.path[0].previousElementSibling.value);
         // let inputVal = e.path[0].previousElementSibling.value;
-        alert(e.target.parentElement.children[0].value + " click 1-1");
+        // alert(e.target.parentElement.children[0].value + " click 1-1");
         // alert(e.path[0].previousElementSibling.value + " touch 1-2");
         let inputVal = e.target.parentElement.children[0].value;
         if(inputVal === "") {return}
-        alert("click 2");
+        // alert("click 2");
         if(inputVal){
             resetData();
         }
-        alert("click 3");
+        // alert("click 3");
         keyword = inputVal;
-        alert("click 4");
+        // alert("click 4");
         searchHashTag(inputVal);
-        alert("click 5");
-        e.path[0].previousElementSibling.value = "";
-        alert("click event!");
+        // alert("click 5");
+        inputVal = "";
+        // alert("click event!");
     })
     searchBar.addEventListener("keyup", function(e){
         // console.log(e);
