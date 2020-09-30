@@ -35,7 +35,7 @@ window.onload = function() {
         // console.log(e.path[0].previousElementSibling.value);
         // let inputVal = e.path[0].previousElementSibling.value;
         alert(e.target.parentElement.children[0].value + " touch 1-1");
-        alert(e.path[0].previousElementSibling.value + " touch 1-2");
+        // alert(e.path[0].previousElementSibling.value + " touch 1-2");
         let inputVal = e.target.parentElement.children[0].value;
         // if(inputVal === "") {return}
         alert("touch 2");
