@@ -28,6 +28,7 @@ window.onload = function() {
     
     // 搜尋
     searchBtn.addEventListener("touchstart", function(e) {
+        alert("touch 1");
         // e.preventDefault()
         // alert("click event!");
         // console.log(e);
@@ -48,6 +49,7 @@ window.onload = function() {
         alert("touchstart event!");
     })
     searchBtn.addEventListener("click", function(e){
+        alert("click 1");
         // e.preventDefault();
         console.log(e);
         console.log(e.path[0].previousElementSibling.value);
