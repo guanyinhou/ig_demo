@@ -1,6 +1,6 @@
 window.onload = function() {
     var searchBar = document.getElementsByClassName("searchBar")[0];
-    var searchClick = document.getElementsByClassName("searchBtn")[0];
+    var searchBtn = document.querySelector(".searchBtn");
     var moreBtn = document.getElementById("more");
     var loadingPage = document.getElementsByClassName("loading")[0];
     var popPage = document.getElementsByClassName("pop")[0];
@@ -27,7 +27,7 @@ window.onload = function() {
     // graphql.hashtag.edge_hashtag_to_media["edge"]; // 所有照片
     
     // 搜尋
-    searchClick.addEventListener("touchstart", function(e) {
+    searchBtn.addEventListener("touchstart", function(e) {
         // e.preventDefault()
         alert("touchstart event!");
         // alert("click event!");
@@ -42,7 +42,7 @@ window.onload = function() {
         searchHashTag(inputVal);
         inputVal = "";
     })
-    searchClick.addEventListener("click", function(e){
+    searchBtn.addEventListener("click", function(e){
         e.preventDefault();
         alert("click event!");
         console.log(e);
