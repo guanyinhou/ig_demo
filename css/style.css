@@ -32,10 +32,12 @@
   width: 100px;
   height: 100px;
   display: inline-block;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  margin-bottom: -2.1px;
+  margin-bottom: -2.3px;
+  background-position: center;
+  background-color: #fff;
 }
 
 @media (max-width: 479.98px) {
@@ -87,15 +89,22 @@
   }
 }
 
+* #app #bar .searchBtn {
+  padding: 10px 15px;
+  background-color: #1fc0a0;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
 * #app #bar .searchBar {
-  width: 300px;
+  width: calc(100% - 100px);
   text-align: center;
   padding: 10px 15px;
   outline: 0;
-  border-radius: 10px;
   -webkit-transition: all .4s;
   transition: all .4s;
-  border-color: #999;
+  border: 0;
 }
 
 * #app #bar .searchBar:focus, * #app #bar searchBar:hover {
@@ -111,7 +120,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   z-index: 1000;
 }
 
@@ -158,7 +167,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 100;
 }
 
 * #app .pop .popImg {
