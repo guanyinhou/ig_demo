@@ -36,15 +36,16 @@ window.onload = function() {
         // let inputVal = e.path[0].previousElementSibling.value;
         alert(e.target.parentElement.children[0].value + " touch 1-1");
         alert(e.path[0].previousElementSibling.value + " touch 1-2");
-        if(e.target.parentElement.children[0].value === "") return;
+        let inputVal = e.target.parentElement.children[0].value;
+        if(inputVal === "") {return}
         alert("touch 2");
-        if(e.target.parentElement.children[0].value !== keyword){
+        if(inputVal){
             resetData();
         }
         alert("touch 3");
-        keyword = e.target.parentElement.children[0].value;
+        keyword = inputVal;
         alert("touch 4");
-        searchHashTag(e.target.parentElement.children[0].value);
+        searchHashTag(inputVal);
         alert("touch 5");
         // e.path[0].previousElementSibling.value = "";
         alert("touchstart event!");
