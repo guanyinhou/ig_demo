@@ -31,10 +31,11 @@ window.onload = function() {
         alert("touch 1");
         // e.preventDefault()
         // alert("click event!");
-        // console.log(e);
+        console.log(e);
         // console.log(e.path[0].previousElementSibling.value);
         // let inputVal = e.path[0].previousElementSibling.value;
-        alert(e.path[0].previousElementSibling.value, "touch 1");
+        alert(e.target.parentElement.children[0].value + " touch 1-1");
+        alert(e.path[0].previousElementSibling.value + " touch 1-2");
         if(e.path[0].previousElementSibling.value === "") return;
         alert("touch 2");
         if(e.path[0].previousElementSibling.value !== keyword){
@@ -45,7 +46,7 @@ window.onload = function() {
         alert("touch 4");
         searchHashTag(e.path[0].previousElementSibling.value);
         alert("touch 5");
-        e.path[0].previousElementSibling.value = "";
+        // e.path[0].previousElementSibling.value = "";
         alert("touchstart event!");
     })
     searchBtn.addEventListener("click", function(e){
@@ -74,10 +75,11 @@ window.onload = function() {
         alert("click 4");
         searchHashTag(inputVal);
         alert("click 5");
-        inputVal = "";
+        // inputVal = "";
         alert("click event!");
     })
     searchBar.addEventListener("keyup", function(e){
+        // console.log(e);
         if(e.keyCode !== 13) return;
         if(this.value === "") return;
         if(this.value !== keyword){
