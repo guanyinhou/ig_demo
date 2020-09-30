@@ -52,31 +52,25 @@ window.onload = function() {
     })
     searchBtn.addEventListener("click", function(e){
         alert("click 1");
-        // e.preventDefault();
+        // e.preventDefault()
+        // alert("click event!");
         console.log(e);
-        console.log(e.path[0].previousElementSibling.value);
-        let inputVal = e.path[0].previousElementSibling.value;
-        alert("inputVal", inputVal);
-        // if(e.keyCode !== 13) return;
-        if(inputVal === "") return;
+        // console.log(e.path[0].previousElementSibling.value);
+        // let inputVal = e.path[0].previousElementSibling.value;
+        alert(e.target.parentElement.children[0].value + " click 1-1");
+        // alert(e.path[0].previousElementSibling.value + " touch 1-2");
+        let inputVal = e.target.parentElement.children[0].value;
+        if(inputVal === "") {return}
         alert("click 2");
-        if(inputVal !== keyword){
+        if(inputVal){
             resetData();
         }
         alert("click 3");
-        // if(this.value === "") return;
-        // if(this.value !== keyword){
-            //     resetData();
-            // }
-            
-            // keyword = this.value;
-            // searchHashTag(this.value);
-            // this.value = "";
         keyword = inputVal;
         alert("click 4");
         searchHashTag(inputVal);
         alert("click 5");
-        // inputVal = "";
+        e.path[0].previousElementSibling.value = "";
         alert("click event!");
     })
     searchBar.addEventListener("keyup", function(e){
