@@ -29,7 +29,6 @@ window.onload = function() {
     // 搜尋
     searchBtn.addEventListener("touchstart", function(e) {
         // e.preventDefault()
-        alert("touchstart event!");
         // alert("click event!");
         console.log(e);
         console.log(e.path[0].previousElementSibling.value);
@@ -41,10 +40,10 @@ window.onload = function() {
         keyword = inputVal;
         searchHashTag(inputVal);
         inputVal = "";
+        alert("touchstart event!");
     })
     searchBtn.addEventListener("click", function(e){
         e.preventDefault();
-        alert("click event!");
         console.log(e);
         console.log(e.path[0].previousElementSibling.value);
         let inputVal = e.path[0].previousElementSibling.value;
@@ -55,15 +54,16 @@ window.onload = function() {
         }
         // if(this.value === "") return;
         // if(this.value !== keyword){
-        //     resetData();
-        // }
-
-        // keyword = this.value;
-        // searchHashTag(this.value);
-        // this.value = "";
+            //     resetData();
+            // }
+            
+            // keyword = this.value;
+            // searchHashTag(this.value);
+            // this.value = "";
         keyword = inputVal;
         searchHashTag(inputVal);
         inputVal = "";
+        alert("click event!");
     })
     searchBar.addEventListener("keyup", function(e){
         if(e.keyCode !== 13) return;
