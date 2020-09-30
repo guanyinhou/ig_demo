@@ -27,29 +27,29 @@ window.onload = function() {
     // graphql.hashtag.edge_hashtag_to_media["edge"]; // 所有照片
     
     // 搜尋
-    searchBtn.addEventListener("touchstart", function(e) {
-        alert("touch 1");
-        // e.preventDefault()
-        // alert("click event!");
-        console.log(e);
-        // console.log(e.path[0].previousElementSibling.value);
-        // let inputVal = e.path[0].previousElementSibling.value;
-        alert(e.target.parentElement.children[0].value + " touch 1-1");
-        // alert(e.path[0].previousElementSibling.value + " touch 1-2");
-        let inputVal = e.target.parentElement.children[0].value;
-        if(inputVal === "") {return}
-        alert("touch 2");
-        if(inputVal){
-            resetData();
-        }
-        alert("touch 3");
-        keyword = inputVal;
-        alert("touch 4");
-        searchHashTag(inputVal);
-        alert("touch 5");
-        e.path[0].previousElementSibling.value = "";
-        alert("touchstart event!");
-    })
+    // searchBtn.addEventListener("touchstart", function(e) {
+    //     // alert("touch 1");
+    //     // e.preventDefault()
+    //     // alert("click event!");
+    //     // console.log(e);
+    //     // console.log(e.path[0].previousElementSibling.value);
+    //     // let inputVal = e.path[0].previousElementSibling.value;
+    //     // alert(e.target.parentElement.children[0].value + " touch 1-1");
+    //     // alert(e.path[0].previousElementSibling.value + " touch 1-2");
+    //     let inputVal = e.target.parentElement.children[0].value;
+    //     if(inputVal === "") {return}
+    //     // alert("touch 2");
+    //     if(inputVal){
+    //         resetData();
+    //     }
+    //     // alert("touch 3");
+    //     keyword = inputVal;
+    //     // alert("touch 4");
+    //     searchHashTag(inputVal);
+    //     // alert("touch 5");
+    //     e.path[0].previousElementSibling.value = "";
+    //     // alert("touchstart event!");
+    // })
     searchBtn.addEventListener("click", function(e){
         alert("click 1");
         // e.preventDefault()
