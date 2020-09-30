@@ -30,16 +30,17 @@ window.onload = function() {
     searchBtn.addEventListener("touchstart", function(e) {
         // e.preventDefault()
         // alert("click event!");
-        console.log(e);
-        console.log(e.path[0].previousElementSibling.value);
-        let inputVal = e.path[0].previousElementSibling.value;
-        if(inputVal === "") return;
-        if(inputVal !== keyword){
+        // console.log(e);
+        // console.log(e.path[0].previousElementSibling.value);
+        // let inputVal = e.path[0].previousElementSibling.value;
+        alert(e.path[0].previousElementSibling.value);
+        if(e.path[0].previousElementSibling.value === "") return;
+        if(e.path[0].previousElementSibling.value !== keyword){
             resetData();
         }
-        keyword = inputVal;
-        searchHashTag(inputVal);
-        inputVal = "";
+        keyword = e.path[0].previousElementSibling.value;
+        searchHashTag(e.path[0].previousElementSibling.value);
+        e.path[0].previousElementSibling.value = "";
         alert("touchstart event!");
     })
     searchBtn.addEventListener("click", function(e){
@@ -47,6 +48,7 @@ window.onload = function() {
         console.log(e);
         console.log(e.path[0].previousElementSibling.value);
         let inputVal = e.path[0].previousElementSibling.value;
+        alert(inputVal);
         // if(e.keyCode !== 13) return;
         if(inputVal === "") return;
         if(inputVal !== keyword){
