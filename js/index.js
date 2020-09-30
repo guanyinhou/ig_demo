@@ -37,11 +37,11 @@ window.onload = function() {
         alert(e.target.parentElement.children[0].value + " touch 1-1");
         alert(e.path[0].previousElementSibling.value + " touch 1-2");
         let inputVal = e.target.parentElement.children[0].value;
-        if(inputVal === "") {return}
+        // if(inputVal === "") {return}
         alert("touch 2");
-        if(inputVal){
-            resetData();
-        }
+        // if(inputVal){
+        //     resetData();
+        // }
         alert("touch 3");
         keyword = inputVal;
         alert("touch 4");
