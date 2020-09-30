@@ -27,23 +27,24 @@ window.onload = function() {
     // graphql.hashtag.edge_hashtag_to_media["edge"]; // 所有照片
     
     // 搜尋
-    // searchClick.addEventListener("touchstart", e => {
-    //     e.preventDefault()
-    //     console.log("touchstart event!")
-    // })
-    searchBar.addEventListener("keyup", function(e){
-        if(e.keyCode !== 13) return;
-        if(this.value === "") return;
-        if(this.value !== keyword){
+    searchClick.addEventListener("touchstart", function(e) {
+        // e.preventDefault()
+        alert("touchstart event!");
+        // alert("click event!");
+        console.log(e);
+        console.log(e.path[0].previousElementSibling.value);
+        let inputVal = e.path[0].previousElementSibling.value;
+        if(inputVal === "") return;
+        if(inputVal !== keyword){
             resetData();
         }
-
-        keyword = this.value;
-        searchHashTag(this.value);
-        this.value = "";
+        keyword = inputVal;
+        searchHashTag(inputVal);
+        inputVal = "";
     })
     searchClick.addEventListener("click", function(e){
         e.preventDefault();
+        alert("click event!");
         console.log(e);
         console.log(e.path[0].previousElementSibling.value);
         let inputVal = e.path[0].previousElementSibling.value;
@@ -63,6 +64,17 @@ window.onload = function() {
         keyword = inputVal;
         searchHashTag(inputVal);
         inputVal = "";
+    })
+    searchBar.addEventListener("keyup", function(e){
+        if(e.keyCode !== 13) return;
+        if(this.value === "") return;
+        if(this.value !== keyword){
+            resetData();
+        }
+
+        keyword = this.value;
+        searchHashTag(this.value);
+        this.value = "";
     })
     
     // 更多結果
