@@ -33,27 +33,33 @@ window.onload = function() {
         // console.log(e);
         // console.log(e.path[0].previousElementSibling.value);
         // let inputVal = e.path[0].previousElementSibling.value;
-        alert(e.path[0].previousElementSibling.value);
+        alert(e.path[0].previousElementSibling.value, "touch 1");
         if(e.path[0].previousElementSibling.value === "") return;
+        alert("touch 2");
         if(e.path[0].previousElementSibling.value !== keyword){
             resetData();
         }
+        alert("touch 3");
         keyword = e.path[0].previousElementSibling.value;
+        alert("touch 4");
         searchHashTag(e.path[0].previousElementSibling.value);
+        alert("touch 5");
         e.path[0].previousElementSibling.value = "";
         alert("touchstart event!");
     })
     searchBtn.addEventListener("click", function(e){
-        e.preventDefault();
+        // e.preventDefault();
         console.log(e);
         console.log(e.path[0].previousElementSibling.value);
         let inputVal = e.path[0].previousElementSibling.value;
-        alert(inputVal);
+        alert("inputVal", inputVal);
         // if(e.keyCode !== 13) return;
         if(inputVal === "") return;
+        alert("click 2");
         if(inputVal !== keyword){
             resetData();
         }
+        alert("click 3");
         // if(this.value === "") return;
         // if(this.value !== keyword){
             //     resetData();
@@ -63,7 +69,9 @@ window.onload = function() {
             // searchHashTag(this.value);
             // this.value = "";
         keyword = inputVal;
+        alert("click 4");
         searchHashTag(inputVal);
+        alert("click 5");
         inputVal = "";
         alert("click event!");
     })
