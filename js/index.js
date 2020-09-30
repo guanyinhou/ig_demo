@@ -27,6 +27,10 @@ window.onload = function() {
     // graphql.hashtag.edge_hashtag_to_media["edge"]; // 所有照片
     
     // 搜尋
+    searchClick.addEventListener("touchstart", e => {
+        e.preventDefault()
+        console.log("touchstart event!")
+    })
     searchClick.addEventListener("click", function(e){
         console.log(e);
         console.log(e.path[0].previousElementSibling.value);
