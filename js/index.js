@@ -31,6 +31,17 @@ window.onload = function() {
     //     e.preventDefault()
     //     console.log("touchstart event!")
     // })
+    searchBar.addEventListener("keyup", function(e){
+        if(e.keyCode !== 13) return;
+        if(this.value === "") return;
+        if(this.value !== keyword){
+            resetData();
+        }
+
+        keyword = this.value;
+        searchHashTag(this.value);
+        this.value = "";
+    })
     searchClick.addEventListener("click", function(e){
         e.preventDefault();
         console.log(e);
@@ -52,17 +63,6 @@ window.onload = function() {
         keyword = inputVal;
         searchHashTag(inputVal);
         inputVal = "";
-    })
-    searchBar.addEventListener("keyup", function(e){
-        if(e.keyCode !== 13) return;
-        if(this.value === "") return;
-        if(this.value !== keyword){
-            resetData();
-        }
-
-        keyword = this.value;
-        searchHashTag(this.value);
-        this.value = "";
     })
     
     // 更多結果
